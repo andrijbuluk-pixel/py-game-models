@@ -23,7 +23,12 @@ class Guild(models.Model):
 
 
 class Player(models.Model):
-    nickname = models.CharField(max_length=255, unique=True, null=True, blank=True)
+    nickname = models.CharField(
+        max_length=255,
+        unique=True,
+        null=True,
+        blank=True
+    )
     email = models.EmailField(max_length=255, unique=False)
     bio = models.CharField(max_length=255)
     race = models.ForeignKey(
