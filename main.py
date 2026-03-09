@@ -35,10 +35,10 @@ def main() -> None:
         player_obj, created = Player.objects.get_or_create(
             nickname=player.get("nickname"),
             defaults={
-                "email":player_data.get("email", ""),
-                "bio":player_data.get("bio", ""),
-                "race":race_obj,
-                "guild":guild_obj if guild_obj else None
+                "email": player_data.get("email", ""),
+                "bio": player_data.get("bio", ""),
+                "race": race_obj,
+                "guild": guild_obj if guild_obj else None
             }
 
         )
